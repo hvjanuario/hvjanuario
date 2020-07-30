@@ -7,6 +7,19 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* initialize the counter */
+body {
+    counter-reset: demoCounter;
+}
+/* increment the counter anywhere there's a h3*/
+h3 {
+    counter-increment: demoCounter;
+}
+/* display the value of the counter before the element */
+h3:before {
+    content: 'Project #' counter(demoCounter);
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
